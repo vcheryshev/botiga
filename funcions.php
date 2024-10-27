@@ -89,7 +89,16 @@ function obtenirProductsPorCategoria($categoria) {
     $jsonData  = file_get_contents("productes.json");
     $data = json_decode($jsonData, true);
 
-
+    try{
+        // El @ lo utilizo porque a pesar de que hago try y catch me sale el warning y queda to feo así que con el @ suprimo los warnings
+        // lanzo una excepción controlada
+        $jsonData  = @file_get_contents("productes.json");
+        if($jsonData ==null){
+            throw new Exception("No hay productos");
+        }
+    }catch(Exception $e){
+        echo $e->getMessage();
+    }
 
     echo  "<br>" ." Productes de la categoria " .$categoria->get_nom() . "<br>";
     foreach ($data as $key => $value) {
@@ -216,6 +225,24 @@ function guardarCategoriaEnMemoria($categoria){
         file_put_contents("categories.json", $jsonActualizado);
         echo "Json actualizado con su categoria";
 
+    }
+
+}
+
+function controlDeDatos($nombre, $descripcion, $precio){
+    if(empty($nombre)){
+        echo "Debes introducir un nombre";
+        exit;
+    }
+
+    if(empty($descripcion)){
+        echo "Debes introducir una descripcion";
+        exit;
+    }
+
+    if(empty($precio)){
+        echo "Debes introducir un precio";
+        exit;
     }
 
 }

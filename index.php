@@ -19,7 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Nomcategoria = $_POST['categorias'];
         $producte=crearProducte($nombre, $descripcion, $precio);
         $categoria=crearCategoria($Nomcategoria, "");
-        agregarCategoriaAProducte($producte, $categoria);
+
+        // Hago un control sobre los datos que introduce los usuarios
+       controlDeDatos($nombre, $descripcion, $precio);
+
+       // Guardo los productos en memoria
+       agregarCategoriaAProducte($producte, $categoria);
         //array_push($productes, $producte);
         guardarProductoEnMemoria($producte);
     }
