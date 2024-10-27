@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+<!-- Formulario para añadir productos -->
+<form action="index.php" method="post">
+    <h2>Agregar Producto</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion">
+
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" name="precio">
+
+    <label for="categorias">Categoría:</label>
+    <select name="categorias" id="categorias">
+        <option value="Ropa de hombre">Ropa de hombre</option>
+        <option value="Ropa de mujer">Ropa de mujer</option>
+        <option value="Accesorios">Accesorios</option>
+        <option value="Tecnologia">Tecnología</option>
+        <option value="">Ninguna</option>
+    </select>
+
+    <input name="enviar" type="submit" value="Guardar producto">
+</form>
+
+<!-- Formulario para buscar productos por categoría -->
+<form action="index.php" method="post">
+    <h2>Buscar Productos por Categoría</h2>
+
+    <label for="buscar_categoria">Categoría:</label>
+    <select name="buscar_categoria" id="buscar_categoria">
+        <option value="Ropa de hombre">Ropa de hombre</option>
+        <option value="Ropa de mujer">Ropa de mujer</option>
+        <option value="Accesorios">Accesorios</option>
+        <option value="Tecnologia">Tecnología</option>
+        <option value="Todas">Todas</option>
+    </select>
+
+    <input name="buscar" type="submit" value="Buscar">
+</form>
+</body>
+</html>
