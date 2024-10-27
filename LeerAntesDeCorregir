@@ -1,0 +1,11 @@
+El proyecto se basa en un formulario html para que la persona pueda medianamente gestionar los productos de una tienda
+Los submmitts del formulario van llamando a las funciones creadas en el archivo funcions.php
+Los datos de los productos se guardan en un json para poder tener persistencia y que no se eliminen una vez el programa sea parado
+El programa también tiene en cuenta los supuestos de que el json no haya sido creado con anterioridad y te lo crea (si el json ya está creado simplemente lo actualiza)
+
+Se puede:
+-Crear un producto
+-Crear una categoria
+-Asignar una categoria al producto
+-Buscar productos según la categoría (si en el combobox del formulario se ponen todas las categorias, mostrará todos los productos independientemente de la categoria)
+-Mostrar todos los productos
