@@ -116,47 +116,7 @@ function mostrarProductes($productes) {
 
     }
 }
-function obternerNombreProductos($productes){
-    $ProductosNom=[];
-    for($i=0; $i<count($productes); $i++){
 
-        $nombreProducto=$productes[$i]->get_Nom();
-        array_push($ProductosNom, $nombreProducto);
-
-    }
-
-    return $ProductosNom;
-}
-
-function obtenerPrecioProductos($productes){
-    $productosPrec=[];
-    for($i=0; $i<count($productes); $i++){
-
-        $precioProducto=$productes[$i]->get_preu();
-        array_push($productosPrec, $precioProducto);
-
-    }
-    return $productosPrec;
-}
-
-function obtenerDescripcionProductos($productes){
-    $productosDesc=[];
-    for($i=0; $i<count($productes); $i++){
-        $descripcionProducto=$productes[$i]->get_desc();
-        array_push($productosDesc, $descripcionProducto);
-    }
-
-    return $productosDesc;
-}
-
-function obtenerCategoriaProductos($productes){
-    $productosCat=[];
-    for($i=0; $i<count($productes); $i++){
-        $PorductCat=$productes[$i]->get_categoria();
-        array_push($productosCat, $PorductCat);
-    }
-    return $productosCat;
-}
 
 
 // Esta de momento no la estoy utilizando

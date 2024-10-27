@@ -4,5 +4,11 @@
         "Descripcion": "Camiseta de Pana",
         "Precio": "85",
         "Categoria": "Ropa de hombre"
+    },
+    {
+        "Nombre Producto": "Blusa",
+        "Descripcion": "Blusa de tela",
+        "Precio": "125",
+        "Categoria": "Ropa de mujer"
     }
 ]
